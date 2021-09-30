@@ -1,0 +1,13 @@
+{
+    "name": "xfin",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "autoprefixer": "^10.3.6",
+        "tailwindcss": "^2.2.16"
+    },
+    "scripts": {
+        "build": "npx tailwindcss build main.css -o output.css"
+    }
+}

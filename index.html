@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Xfinity</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+            integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+            integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="/output.css" />
+        <style>
+            @font-face {
+                font-family: "bl";
+                src: url("./fonts/HandoTrial-Black.otf");
+            }
+            @font-face {
+                font-family: "reg";
+                src: url("./fonts/HandoTrial-Regular.otf");
+            }
+            @font-face {
+                font-family: "light";
+                src: url("./fonts/HandoTrial-Light.otf");
+            }
+            @font-face {
+                font-family: "bold";
+                src: url("./fonts/HandoTrial-Bold.otf");
+            }
+            .font-reg {
+                font-family: reg !important;
+            }
+            .font-bl {
+                font-family: bl !important;
+            }
+            .font-bold {
+                font-family: bold !important;
+            }
+            .font-light {
+                font-family: light !important;
+            }
+            * {
+                font-family: reg;
+            }
+            .nav-cont {
+                padding-right: 8vw;
+                padding-left: 8vw;
+            }
+            .cont {
+                padding-right: 20vw;
+                padding-left: 20vw;
+            }
+            #dolar {
+                top: 18%;
+                left: -20%;
+            }
+            img {
+                user-drag: none;
+                -webkit-user-drag: none;
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                object-fit: cover;
+            }
+            .socials {
+                top: 50%;
+                right: 20%;
+                transform: translateY(-50%);
+            }
+            footer .socials {
+                transform: translateY(0);
+            }
+            .socials a {
+                margin: 1vh 0;
+            }
+            .exp-card {
+                border: 1px dashed #e94c3d;
+                height: 38vh;
+            }
+            .owl-dots {
+                display: none !important;
+            }
+            .owl-nav {
+                position: absolute;
+                top: -32%;
+                right: 0;
+                display: flex;
+                justify-content: flex-end;
+            }
+            .owl-two .owl-nav {
+                top: -28%;
+            }
+            .owl-nav button {
+                color: #e94c3d !important;
+            }
+            .owl-nav button img {
+                width: 2vw;
+            }
+            .owl-nav button:hover {
+                background-color: transparent !important;
+            }
+            .cv-box {
+                border: 1px dashed #e94c3d;
+            }
+
+            /* REVIEWS */
+            .review {
+                display: flex;
+                padding: 6vh 4vw;
+                padding-left: 2vw;
+                margin: 2vh 0;
+                border-radius: 5px;
+                border: 1px dashed #e94c3d;
+            }
+            .review-left {
+                width: 35%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-right: 5%;
+            }
+            .review-content {
+                width: 75%;
+            }
+            .review img {
+                width: 10vw !important;
+                height: 10vw;
+                border-radius: 50%;
+            }
+            .review h2 {
+                color: #e94c3d;
+                font-weight: 500;
+                font-size: 1.6vw;
+                margin-top: 2vh;
+                margin-bottom: 0;
+            }
+            .review h3 {
+                font-weight: 400;
+                font-size: 1vw;
+            }
+            .review p {
+                font-size: 1.4vw;
+                text-align: justify;
+            }
+            @media (max-width: 1400px) {
+                .exp-card {
+                    height: 45vh;
+                }
+            }
+            @media (max-width: 800px) {
+                .nav-cont {
+                    padding-right: 4vw;
+                    padding-left: 4vw;
+                }
+                .cont {
+                    padding-right: 8vw;
+                    padding-left: 8vw;
+                }
+                .review {
+                    padding: 4vh 6vw;
+                    padding-left: 3vw;
+                    margin: 1vh 0;
+                }
+                .review-left {
+                    width: 30%;
+                    padding-right: 5%;
+                }
+                .review-content {
+                    width: 70%;
+                }
+                .review img {
+                    width: 12vw !important;
+                    height: 12vw !important;
+                }
+                .review h2 {
+                    font-size: 2.6vw;
+                    margin-top: 1.6vh;
+                    margin-bottom: 0.4vh;
+                }
+                .review h3 {
+                    font-size: 2vw;
+                }
+                .review p {
+                    font-size: 2vw;
+                }
+                #dolar {
+                    top: 23%;
+                    left: -16%;
+                }
+                .socials {
+                    right: 14%;
+                }
+                .exp-card {
+                    height: 34vh;
+                }
+
+                .owl-nav {
+                    top: -24%;
+                }
+                .owl-nav button img {
+                    width: 3vw;
+                }
+            }
+            @media (max-width: 500px) {
+                .fake-cont {
+                    transform: translateX(12px);
+                }
+                .nav-cont {
+                    padding-right: 8vw;
+                    padding-left: 8vw;
+                }
+                .cont {
+                    padding-right: 6vw;
+                    padding-left: 6vw;
+                }
+                .review {
+                    padding: 3vh 7vw;
+                    margin: 1vh 0;
+                    flex-direction: column;
+                }
+                .review-left {
+                    width: 100%;
+                    margin-bottom: 3vh;
+                }
+                .review-content {
+                    width: 100%;
+                }
+                .review img {
+                    width: 22vw !important;
+                    height: 22vw !important;
+                }
+                .review h2 {
+                    font-size: 5vw;
+                    margin-top: 1vh;
+                    margin-bottom: 0.2vh;
+                }
+                .review h3 {
+                    font-size: 3vw;
+                }
+                .review p {
+                    font-size: 3.4vw;
+                    text-align: justify;
+                }
+                .socials {
+                    right: 50%;
+                    transform: translateX(50%) translateY(350%);
+                }
+                .owl-nav {
+                    top: -19%;
+                }
+                .owl-two .owl-nav {
+                    top: -20%;
+                }
+                .owl-nav button img {
+                    width: 5vw;
+                }
+                .exp-card {
+                    height: 44vh;
+                }
+                .side {
+                    box-shadow: 0 0 100px rgba(255, 255, 255, 0.212);
+                }
+            }
+        </style>
+    </head>
+    <body class="bg-black text-white">
+        <main class="w-screen" style="overflow-x: hidden">
+            <nav
+                class="
+                    w-full
+                    flex
+                    items-center
+                    nav-cont
+                    bg-black
+                    py-7
+                    z-20
+                    fixed
+                    top-0
+                    left-0
+                    2xl:py-4
+                    lg:py-5
+                    sm:py-4 sm:justify-between
+                "
+            >
+                <div class="w-1/2">
+                    <img
+                        src="/assets/logo.svg"
+                        alt="logo"
+                        class="w-1/6 lg:w-1/4 sm:w-1/2"
+                    />
+                </div>
+
+                <div
+                    class="
+                        side
+                        w-1/2
+                        flex
+                        justify-end
+                        items-center
+                        sm:fixed
+                        sm:hidden
+                        sm:w-2/3
+                        sm:top-0
+                        sm:right-0
+                        sm:z-10
+                        sm:h-screen
+                        sm:bg-black
+                        sm:flex-col
+                        sm:justify-center
+                    "
+                >
+                    <a
+                        href="/"
+                        class="
+                            text-white text-xl
+                            transition-all
+                            duration-150
+                            hover:underline
+                            ml-32
+                            xl:text-base xl:ml-20
+                            lg:ml-16 lg:text-lg
+                            sm:text-xl sm:m-0 sm:mb-14
+                        "
+                    >
+                        Home
+                    </a>
+                    <a
+                        href="/"
+                        class="
+                            text-white text-xl
+                            transition-all
+                            duration-150
+                            hover:underline
+                            ml-32
+                            xl:text-base xl:ml-20
+                            lg:ml-16 lg:text-lg
+                            sm:text-xl sm:m-0 sm:mb-14
+                        "
+                    >
+                        Home
+                    </a>
+                    <a
+                        href="/"
+                        class="
+                            text-white text-xl
+                            transition-all
+                            duration-150
+                            ml-32
+                            bg-red
+                            whitespace-nowrap
+                            px-6
+                            py-2
+                            rounded-lg
+                            xl:text-base xl:ml-20
+                            lg:ml-16 lg:text-lg
+                            sm:text-xl sm:m-0 sm:mb-14
+                        "
+                    >
+                        View Work
+                    </a>
+                </div>
+
+                <button
+                    class="ham text-3xl hidden text-red sm:inline-block z-20"
+                >
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times hidden"></i>
+                </button>
+            </nav>
+
+            <div class="w-screen cont flex sm:flex-col-reverse">
+                <div
+                    class="
+                        flex flex-col
+                        w-2/3
+                        h-full
+                        justify-between
+                        pt-60
+                        relative
+                        lg:pt-52 lg:w-10/12
+                        sm:pt-0 sm:w-full
+                    "
+                >
+                    <img
+                        src="/assets/dolar.svg"
+                        alt=""
+                        class="absolute w-96 xl:w-72 lg:w-80 sm:hidden"
+                        id="dolar"
+                    />
+                    <h1
+                        class="
+                            text-7xl
+                            mt-10
+                            mb-14
+                            font-bold
+                            text-red
+                            xl:text-5xl xl:mb-6
+                            lg:mb-6
+                            sm:text-3xl sm:text-center
+                        "
+                    >
+                        Hello There!
+                    </h1>
+                    <p
+                        class="
+                            text-3xl
+                            font-medium
+                            text-white
+                            pr-20
+                            leading-relaxed
+                            xl:text-2xl
+                            lg:text-lg
+                            sm:text-base sm:text-center sm:pr-0
+                        "
+                    >
+                        I’m <b class="text-red font-bold">Armaan</b>, a
+                        financial nerd with an urge to learn more about finance
+                        and achieve my goals in my career. Find out more about
+                        me below!
+                    </p>
+                </div>
+
+                <div
+                    class="
+                        flex
+                        items-start
+                        w-7/12
+                        pt-60
+                        lg:pt-44
+                        sm:pt-20 sm:w-full sm:justify-center
+                    "
+                >
+                    <img
+                        src="/assets/arm.svg"
+                        class="w-full h-2/12 mb-5 rounded-xl xl:10/12 sm:w-8/12"
+                        alt=""
+                    />
+                </div>
+            </div>
+
+            <div
+                class="
+                    fake-cont
+                    cont
+                    flex
+                    justify-between
+                    items-center
+                    py-12
+                    sm:flex-col sm:items-center
+                "
+            >
+                <img
+                    src="/assets/bus.svg"
+                    class="w-1/3 sm:w-full sm:mb-6"
+                    alt=""
+                />
+                <img
+                    src="/assets/des.svg"
+                    class="w-1/3 sm:w-full sm:mb-6"
+                    alt=""
+                />
+                <img
+                    src="/assets/vid.svg"
+                    class="w-1/3 sm:w-full sm:mb-6"
+                    alt=""
+                />
+            </div>
+
+            <div class="cont mt-24 mb-20 relative sm:mt-10">
+                <h1
+                    class="
+                        text-6xl text-red
+                        font-bold
+                        mb-16
+                        xl:text-5xl xl:mb-10
+                        lg:mb-6
+                        sm:text-center sm:text-3xl
+                    "
+                >
+                    My journey so far
+                </h1>
+                <p
+                    class="
+                        text-3xl
+                        leading-normal
+                        pr-52
+                        xl:text-2xl
+                        lg:text-xl
+                        sm:text-center sm:pr-0
+                    "
+                >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore
+                </p>
+                <div
+                    class="
+                        socials
+                        absolute
+                        flex flex-col
+                        sm:flex-row sm:w-full sm:justify-between sm:px-20
+                    "
+                >
+                    <a href="/" class="text-white text-4xl"
+                        ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href="/" class="text-white text-4xl"
+                        ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href="/" class="text-white text-4xl"
+                        ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href="/" class="text-white text-4xl"
+                        ><i class="fab fa-instagram"></i
+                    ></a>
+                </div>
+            </div>
+
+            <div class="cont experience mt-28 mb-24 sm:mt-40">
+                <h1
+                    class="
+                        text-6xl text-red
+                        font-bold
+                        mb-16
+                        xl:text-5xl xl:mb-10
+                        lg:mb-6
+                        sm:text-3xl sm:text-center
+                    "
+                >
+                    Experience
+                </h1>
+
+                <div class="owl-carousel owl-theme owl-one">
+                    <div class="item py-12 px-6 exp-card rounded-lg">
+                        <p class="mb-7">May<br />2021</p>
+                        <h2 class="text-4xl mb-7 font-bold">
+                            Compunnel Software
+                        </h2>
+                        <a href="/" class="flex items-center mb-12"
+                            >Finance intern&nbsp;&nbsp;&nbsp;<i
+                                class="
+                                    fas
+                                    fa-chevron-right
+                                    bg-red
+                                    w-7
+                                    h-7
+                                    flex
+                                    justify-center
+                                    items-center
+                                    text-black
+                                    rounded-full
+                                "
+                            ></i
+                        ></a>
+                    </div>
+
+                    <div class="item py-12 px-6 exp-card rounded-lg">
+                        <p class="mb-7">July<br />2021</p>
+                        <h2 class="text-4xl mb-7 font-bold">
+                            Inglu<br />Global
+                        </h2>
+                        <a href="/" class="flex items-center mb-12"
+                            >SMM Intern&nbsp;&nbsp;&nbsp;<i
+                                class="
+                                    fas
+                                    fa-chevron-right
+                                    bg-red
+                                    w-7
+                                    h-7
+                                    flex
+                                    justify-center
+                                    items-center
+                                    text-black
+                                    rounded-full
+                                "
+                            ></i
+                        ></a>
+                    </div>
+
+                    <div class="item py-12 px-6 exp-card rounded-lg">
+                        <p class="mb-7">June<br />2021</p>
+                        <h2 class="text-4xl mb-7 font-bold">
+                            The Uncut<br />Team
+                        </h2>
+                        <a href="/" class="flex items-center mb-12"
+                            >Video Editing intern&nbsp;&nbsp;&nbsp;<i
+                                class="
+                                    fas
+                                    fa-chevron-right
+                                    bg-red
+                                    w-7
+                                    h-7
+                                    flex
+                                    justify-center
+                                    items-center
+                                    text-black
+                                    rounded-full
+                                "
+                            ></i
+                        ></a>
+                    </div>
+
+                    <div class="item py-12 px-6 exp-card rounded-lg">
+                        <p class="mb-7">May<br />2021</p>
+                        <h2 class="text-4xl mb-7 font-bold">
+                            Compunnel Software
+                        </h2>
+                        <a href="/" class="flex items-center mb-12"
+                            >Finance intern&nbsp;&nbsp;&nbsp;<i
+                                class="
+                                    fas
+                                    fa-chevron-right
+                                    bg-red
+                                    w-7
+                                    h-7
+                                    flex
+                                    justify-center
+                                    items-center
+                                    text-black
+                                    rounded-full
+                                "
+                            ></i
+                        ></a>
+                    </div>
+
+                    <div class="item py-12 px-6 exp-card rounded-lg">
+                        <p class="mb-7">July<br />2021</p>
+                        <h2 class="text-4xl mb-7 font-bold">
+                            Inglu<br />Global
+                        </h2>
+                        <a href="/" class="flex items-center mb-12"
+                            >SMM Intern&nbsp;&nbsp;&nbsp;<i
+                                class="
+                                    fas
+                                    fa-chevron-right
+                                    bg-red
+                                    w-7
+                                    h-7
+                                    flex
+                                    justify-center
+                                    items-center
+                                    text-black
+                                    rounded-full
+                                "
+                            ></i
+                        ></a>
+                    </div>
+
+                    <div class="item py-12 px-6 exp-card rounded-lg">
+                        <p class="mb-7">June<br />2021</p>
+                        <h2 class="text-4xl mb-7 font-bold">
+                            The Uncut<br />Team
+                        </h2>
+                        <a href="/" class="flex items-center mb-12"
+                            >Video Editing intern&nbsp;&nbsp;&nbsp;<i
+                                class="
+                                    fas
+                                    fa-chevron-right
+                                    bg-red
+                                    w-7
+                                    h-7
+                                    flex
+                                    justify-center
+                                    items-center
+                                    text-black
+                                    rounded-full
+                                "
+                            ></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cont cv mb-20">
+                <div
+                    class="
+                        cv-box
+                        rounded-lg
+                        w-full
+                        px-20
+                        py-16
+                        flex flex-col
+                        items-center
+                        justify-center
+                        sm:px-10 sm:py-8
+                    "
+                >
+                    <h1
+                        class="
+                            text-6xl text-red
+                            font-bold
+                            mb-16
+                            xl:mb-10 xl:text-5xl
+                            sm:text-2xl sm:mb-4
+                        "
+                    >
+                        Review my cv
+                    </h1>
+                    <p
+                        class="
+                            text-3xl
+                            leading-normal
+                            w-2/3
+                            text-center
+                            mb-16
+                            lg:w-full
+                            xl:mb-10 xl:text-2xl
+                            sm:text-base sm:w-full sm:mb-6
+                        "
+                    >
+                        More detailed summary can be viewed by downloading the
+                        pdf file
+                    </p>
+                    <a
+                        href="/"
+                        class="
+                            text-white text-xl
+                            bg-red
+                            px-16
+                            py-5
+                            rounded-lg
+                            sm:px-10 sm:py-3 sm:text-base
+                        "
+                    >
+                        View pdf
+                    </a>
+                </div>
+            </div>
+
+            <div class="cont mt-28 mb-24">
+                <h1
+                    class="
+                        text-6xl text-red
+                        font-bold
+                        mb-16
+                        xl:mb-10 xl:text-5xl
+                        lg:mb-6
+                        sm:text-xl sm:text-center
+                    "
+                >
+                    On Working with me
+                </h1>
+
+                <div class="owl-carousel owl-theme owl-two">
+                    <div class="item review">
+                        <div class="review-left">
+                            <img src="/assets/sample.png" alt="ishana" />
+                            <h2 class="font-bold">Ishaan Das</h2>
+                            <h3>Founder Director</h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="leading-snug">
+                                “Armaan and I collaborated on a number of
+                                projects involving business research and study.
+                                We created three business models, expanded our
+                                network by competing in several contests, and
+                                most importantly, learned about a fascinating
+                                field. Armaan's expertise in financial
+                                management, logistics experience, and
+                                technological know-how all contributed to
+                                attaining our goals. I recommend him highly.”
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item review">
+                        <div class="review-left">
+                            <img src="/assets/sample.png" alt="ishana" />
+                            <h2 class="font-bold">Ishaan Das</h2>
+                            <h3>Founder Director</h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="leading-snug">
+                                “Armaan and I collaborated on a number of
+                                projects involving business research and study.
+                                We created three business models, expanded our
+                                network by competing in several contests, and
+                                most importantly, learned about a fascinating
+                                field. Armaan's expertise in financial
+                                management, logistics experience, and
+                                technological know-how all contributed to
+                                attaining our goals. I recommend him highly.”
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item review">
+                        <div class="review-left">
+                            <img src="/assets/sample.png" alt="ishana" />
+                            <h2 class="font-bold">Ishaan Das</h2>
+                            <h3>Founder Director</h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="leading-snug">
+                                “Armaan and I collaborated on a number of
+                                projects involving business research and study.
+                                We created three business models, expanded our
+                                network by competing in several contests, and
+                                most importantly, learned about a fascinating
+                                field. Armaan's expertise in financial
+                                management, logistics experience, and
+                                technological know-how all contributed to
+                                attaining our goals. I recommend him highly.”
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item review">
+                        <div class="review-left">
+                            <img src="/assets/sample.png" alt="ishana" />
+                            <h2 class="font-bold">Ishaan Das</h2>
+                            <h3>Founder Director</h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="leading-snug">
+                                “Armaan and I collaborated on a number of
+                                projects involving business research and study.
+                                We created three business models, expanded our
+                                network by competing in several contests, and
+                                most importantly, learned about a fascinating
+                                field. Armaan's expertise in financial
+                                management, logistics experience, and
+                                technological know-how all contributed to
+                                attaining our goals. I recommend him highly.”
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item review">
+                        <div class="review-left">
+                            <img src="/assets/sample.png" alt="ishana" />
+                            <h2 class="font-bold">Ishaan Das</h2>
+                            <h3>Founder Director</h3>
+                        </div>
+                        <div class="review-content">
+                            <p class="leading-snug">
+                                “Armaan and I collaborated on a number of
+                                projects involving business research and study.
+                                We created three business models, expanded our
+                                network by competing in several contests, and
+                                most importantly, learned about a fascinating
+                                field. Armaan's expertise in financial
+                                management, logistics experience, and
+                                technological know-how all contributed to
+                                attaining our goals. I recommend him highly.”
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer
+                class="w-screen py-10 flex flex-col justify-center items-center"
+                style="background: #202020"
+            >
+                <h1 class="text-red text-6xl font-bold xl:text-5xl sm:text-2xl">
+                    Thanks!
+                </h1>
+                <p class="text-xl mt-5 mb-5 sm:text-center sm:text-base">
+                    Feel free to contact me on any of my socials
+                </p>
+                <div
+                    class="
+                        socials
+                        flex
+                        justify-between
+                        w-1/6
+                        px-10
+                        xl:w-2/6 xl:px-20
+                        lg:w-3/6
+                        sm:p-0
+                    "
+                >
+                    <a href="/" class="text-white text-4xl"
+                        ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href="/" class="text-white text-4xl"
+                        ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href="/" class="text-white text-4xl"
+                        ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href="/" class="text-white text-4xl"
+                        ><i class="fab fa-instagram"></i
+                    ></a>
+                </div>
+            </footer>
+        </main>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script>
+            const props_one = {
+                loop: true,
+                margin: 40,
+                nav: true,
+                navText: [
+                    "<img src='/assets/prev-nav.svg'>",
+                    "<img src='/assets/next-nav.svg'>",
+                ],
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 2,
+                    },
+                    1200: {
+                        items: 3,
+                    },
+                },
+            };
+            const props_two = {
+                loop: true,
+                margin: 20,
+                nav: true,
+                navText: [
+                    "<img src='/assets/prev-nav.svg'>",
+                    "<img src='/assets/next-nav.svg'>",
+                ],
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 1,
+                    },
+                    1000: {
+                        items: 1,
+                    },
+                },
+            };
+            $(".owl-one").owlCarousel(props_one);
+            $(".owl-two").owlCarousel(props_two);
+
+            document.querySelector(".ham").addEventListener("click", (e) => {
+                document
+                    .querySelector(".ham")
+                    .children[0].classList.toggle("hidden");
+                document
+                    .querySelector(".ham")
+                    .children[1].classList.toggle("hidden");
+
+                document.querySelector(".side").classList.toggle("sm:hidden");
+            });
+        </script>
+    </body>
+</html>
