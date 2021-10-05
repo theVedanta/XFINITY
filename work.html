@@ -104,7 +104,7 @@
             }
             .owl-nav {
                 position: absolute;
-                top: -32%;
+                top: -10%;
                 right: 0;
                 display: flex;
                 justify-content: flex-end;
@@ -133,20 +133,37 @@
                 margin: 2vh 0;
                 border-radius: 5px;
             }
+            .work {
+                padding: 6vh 4vw;
+                padding-right: 0;
+                border: 2px dashed #e94c3d;
+            }
             .review-left {
-                width: 35%;
+                width: 25%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 padding-right: 5%;
             }
+            .work .review-left {
+                width: 40%;
+                justify-content: center;
+            }
             .review-content {
                 width: 75%;
+            }
+            .work .review-content {
+                width: 60%;
             }
             .review img {
                 width: 10vw !important;
                 height: 10vw;
                 border-radius: 50%;
+            }
+            .work img {
+                width: 70% !important;
+                height: 80%;
+                border-radius: 10px;
             }
             .review h2 {
                 color: #e94c3d;
@@ -154,6 +171,10 @@
                 font-size: 1.6vw;
                 margin-top: 2vh;
                 margin-bottom: 0;
+            }
+            .work h2 {
+                font-size: 2.4vw;
+                margin-bottom: 4vh;
             }
             .review h3 {
                 font-weight: 400;
@@ -220,6 +241,26 @@
                 }
                 .owl-nav button img {
                     width: 3vw;
+                }
+
+                .work {
+                    padding: 3vh 6vw;
+                    padding-right: 0;
+                }
+                .work .review-left {
+                    width: 40%;
+                }
+                .work .review-content {
+                    width: 60%;
+                }
+                .work img {
+                    width: 70% !important;
+                    height: 80% !important;
+                    border-radius: 10px;
+                }
+                .work h2 {
+                    font-size: 4vw;
+                    margin-bottom: 2.7vh;
                 }
             }
             @media (max-width: 500px) {
@@ -291,6 +332,27 @@
                     right: 0;
                     opacity: 1;
                     pointer-events: all;
+                }
+
+                .work {
+                    padding: 3vh 10vw;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .work .review-left {
+                    width: 100%;
+                }
+                .work .review-content {
+                    width: 100%;
+                }
+                .work img {
+                    width: 80% !important;
+                    height: 30vh !important;
+                    border-radius: 10px;
+                }
+                .work h2 {
+                    font-size: 5vw;
+                    margin-bottom: 2vh;
                 }
             }
         </style>
@@ -398,105 +460,7 @@
                 </button>
             </nav>
 
-            <div class="w-screen cont flex sm:flex-col-reverse">
-                <div
-                    class="
-                        flex flex-col
-                        w-6/12
-                        h-full
-                        justify-between
-                        pt-60
-                        relative
-                        lg:pt-52 lg:w-10/12
-                        sm:pt-0 sm:w-full
-                    "
-                >
-                    <img
-                        src="./assets/dolar.svg"
-                        alt=""
-                        class="absolute w-96 xl:w-72 lg:w-80 sm:hidden"
-                        id="dolar"
-                    />
-                    <h1
-                        class="
-                            text-7xl
-                            mt-10
-                            mb-14
-                            font-bold
-                            text-red
-                            xl:text-5xl xl:mb-6
-                            lg:mb-6
-                            sm:text-3xl sm:text-center
-                        "
-                    >
-                        Hello There!
-                    </h1>
-                    <p
-                        class="
-                            text-2xl
-                            font-medium
-                            text-white
-                            leading-relaxed
-                            pr-10
-                            lg:text-lg
-                            sm:text-base sm:text-center sm:pr-0
-                        "
-                    >
-                        I’m <b class="text-red font-bold">Armaan</b>, a
-                        financial nerd with an urge to learn more about finance
-                        and achieve my goals in my career. Find out more about
-                        me below!
-                    </p>
-                </div>
-
-                <div
-                    class="
-                        flex
-                        items-start
-                        justify-center
-                        w-6/12
-                        pt-60
-                        lg:pt-44
-                        sm:pt-20 sm:w-full sm:justify-center
-                    "
-                >
-                    <img
-                        src="./assets/arm.svg"
-                        class="w-9/12 mb-5 rounded-xl xl:w-10/12 sm:w-8/12"
-                        alt=""
-                    />
-                </div>
-            </div>
-
-            <div
-                class="
-                    fake-cont
-                    cont
-                    flex
-                    justify-between
-                    items-center
-                    py-12
-                    sm:flex-col sm:items-center
-                "
-            >
-                <img
-                    src="./assets/bus.svg"
-                    class="w-1/3 sm:w-full sm:mb-6"
-                    alt=""
-                />
-                <img
-                    src="./assets/des.svg"
-                    class="w-1/3 sm:w-full sm:mb-6"
-                    alt=""
-                />
-                <img
-                    src="./assets/vid.svg"
-                    class="w-1/3 sm:w-full sm:mb-6"
-                    alt=""
-                />
-            </div>
-
-            <div class="cont mt-24 mb-20 relative sm:mt-10">
+            <div class="cont mt-40 mb-40 relative sm:mt-10">
                 <h1
                     class="
                         text-6xl text-red
@@ -507,256 +471,66 @@
                         sm:text-center sm:text-3xl
                     "
                 >
-                    My journey so far
+                    My Work
                 </h1>
                 <p
                     class="
                         text-3xl
                         leading-normal
-                        pr-52
+                        pr-64
                         xl:text-2xl
                         lg:text-xl
                         sm:text-center sm:pr-0
                     "
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore
+                    These are a few of the projects I worked on during my school
+                    years that I'm proud of. Business models, UI/UX designs,
+                    graphic design, and video editing are some of the topics
+                    that are covered.
                 </p>
-                <div
-                    class="
-                        socials
-                        absolute
-                        flex flex-col
-                        sm:flex-row sm:w-full sm:justify-between sm:px-20
-                    "
-                >
-                    <a href="/" class="text-white text-4xl"
-                        ><i class="fab fa-instagram"></i
-                    ></a>
-                    <a href="/" class="text-white text-4xl"
-                        ><i class="fab fa-instagram"></i
-                    ></a>
-                    <a href="/" class="text-white text-4xl"
-                        ><i class="fab fa-instagram"></i
-                    ></a>
-                    <a href="/" class="text-white text-4xl"
-                        ><i class="fab fa-instagram"></i
-                    ></a>
-                </div>
             </div>
 
-            <div class="cont experience mt-28 relative mb-24 sm:mt-40">
-                <h1
-                    class="
-                        text-6xl text-red
-                        font-bold
-                        mb-16
-                        xl:text-5xl xl:mb-10
-                        lg:mb-6
-                        sm:text-3xl sm:text-center
-                    "
-                >
-                    Experience
-                </h1>
-
-                <div class="owl-carousel owl-theme owl-one">
-                    <div class="item py-12 px-6 exp-card rounded-lg">
-                        <p class="mb-7">May<br />2021</p>
-                        <h2 class="text-4xl mb-7 font-bold">
-                            Compunnel Software
-                        </h2>
-                        <a href="/" class="flex items-center mb-12"
-                            >Finance intern&nbsp;&nbsp;&nbsp;<i
+            <div class="cont mt-28 mb-24 relative">
+                <div class="owl-carousel owl-theme">
+                    <div class="item review work">
+                        <div class="review-content sm:mb-10">
+                            <h2 class="font-bold">
+                                The Stock Market E-Magazine
+                            </h2>
+                            <p class="leading-snug">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut
+                                enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure
+                            </p>
+                            <a
+                                href="/"
                                 class="
-                                    fas
-                                    fa-chevron-right
+                                    text-white text-xl
+                                    transition-all
+                                    duration-150
                                     bg-red
-                                    w-7
-                                    h-7
-                                    flex
-                                    justify-center
-                                    items-center
-                                    text-black
-                                    rounded-full
+                                    whitespace-nowrap
+                                    px-10
+                                    static
+                                    inline-block
+                                    mt-10
+                                    py-4
+                                    rounded-lg
+                                    xl:text-base
+                                    lg:text-base
+                                    sm:m-0 sm:mt-10 sm:text-sm
                                 "
-                            ></i
-                        ></a>
+                            >
+                                View Work
+                            </a>
+                        </div>
+                        <div class="review-left" style="padding-right: 0">
+                            <img src="./assets/sample.png" alt="ishana" />
+                        </div>
                     </div>
-
-                    <div class="item py-12 px-6 exp-card rounded-lg">
-                        <p class="mb-7">July<br />2021</p>
-                        <h2 class="text-4xl mb-7 font-bold">
-                            Inglu<br />Global
-                        </h2>
-                        <a href="/" class="flex items-center mb-12"
-                            >SMM Intern&nbsp;&nbsp;&nbsp;<i
-                                class="
-                                    fas
-                                    fa-chevron-right
-                                    bg-red
-                                    w-7
-                                    h-7
-                                    flex
-                                    justify-center
-                                    items-center
-                                    text-black
-                                    rounded-full
-                                "
-                            ></i
-                        ></a>
-                    </div>
-
-                    <div class="item py-12 px-6 exp-card rounded-lg">
-                        <p class="mb-7">June<br />2021</p>
-                        <h2 class="text-4xl mb-7 font-bold">
-                            The Uncut<br />Team
-                        </h2>
-                        <a href="/" class="flex items-center mb-12"
-                            >Video Editing intern&nbsp;&nbsp;&nbsp;<i
-                                class="
-                                    fas
-                                    fa-chevron-right
-                                    bg-red
-                                    w-7
-                                    h-7
-                                    flex
-                                    justify-center
-                                    items-center
-                                    text-black
-                                    rounded-full
-                                "
-                            ></i
-                        ></a>
-                    </div>
-
-                    <div class="item py-12 px-6 exp-card rounded-lg">
-                        <p class="mb-7">May<br />2021</p>
-                        <h2 class="text-4xl mb-7 font-bold">
-                            Compunnel Software
-                        </h2>
-                        <a href="/" class="flex items-center mb-12"
-                            >Finance intern&nbsp;&nbsp;&nbsp;<i
-                                class="
-                                    fas
-                                    fa-chevron-right
-                                    bg-red
-                                    w-7
-                                    h-7
-                                    flex
-                                    justify-center
-                                    items-center
-                                    text-black
-                                    rounded-full
-                                "
-                            ></i
-                        ></a>
-                    </div>
-
-                    <div class="item py-12 px-6 exp-card rounded-lg">
-                        <p class="mb-7">July<br />2021</p>
-                        <h2 class="text-4xl mb-7 font-bold">
-                            Inglu<br />Global
-                        </h2>
-                        <a href="/" class="flex items-center mb-12"
-                            >SMM Intern&nbsp;&nbsp;&nbsp;<i
-                                class="
-                                    fas
-                                    fa-chevron-right
-                                    bg-red
-                                    w-7
-                                    h-7
-                                    flex
-                                    justify-center
-                                    items-center
-                                    text-black
-                                    rounded-full
-                                "
-                            ></i
-                        ></a>
-                    </div>
-
-                    <div class="item py-12 px-6 exp-card rounded-lg">
-                        <p class="mb-7">June<br />2021</p>
-                        <h2 class="text-4xl mb-7 font-bold">
-                            The Uncut<br />Team
-                        </h2>
-                        <a href="/" class="flex items-center mb-12"
-                            >Video Editing intern&nbsp;&nbsp;&nbsp;<i
-                                class="
-                                    fas
-                                    fa-chevron-right
-                                    bg-red
-                                    w-7
-                                    h-7
-                                    flex
-                                    justify-center
-                                    items-center
-                                    text-black
-                                    rounded-full
-                                "
-                            ></i
-                        ></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cont cv mb-20">
-                <div
-                    class="
-                        cv-box
-                        rounded-lg
-                        w-full
-                        px-20
-                        py-16
-                        flex flex-col
-                        items-center
-                        justify-center
-                        sm:px-10 sm:py-8
-                    "
-                >
-                    <h1
-                        class="
-                            text-6xl text-red
-                            font-bold
-                            mb-16
-                            xl:mb-10 xl:text-5xl
-                            sm:text-2xl sm:mb-4
-                        "
-                    >
-                        Review my cv
-                    </h1>
-                    <p
-                        class="
-                            text-3xl
-                            leading-normal
-                            w-2/3
-                            text-center
-                            mb-16
-                            lg:w-full
-                            xl:mb-10 xl:text-2xl
-                            sm:text-base sm:w-full sm:mb-6
-                        "
-                    >
-                        More detailed summary can be viewed by downloading the
-                        pdf file
-                    </p>
-                    <a
-                        href="/"
-                        class="
-                            text-white text-xl
-                            bg-red
-                            px-16
-                            py-5
-                            rounded-lg
-                            sm:px-10 sm:py-3 sm:text-base
-                        "
-                    >
-                        View pdf
-                    </a>
                 </div>
             </div>
 
@@ -946,35 +720,14 @@
                         items: 1,
                     },
                     600: {
-                        items: 2,
+                        items: 1,
                     },
                     1200: {
-                        items: 3,
-                    },
-                },
-            };
-            const props_two = {
-                loop: true,
-                margin: 20,
-                nav: true,
-                navText: [
-                    "<img src='./assets/prev-nav.svg'>",
-                    "<img src='./assets/next-nav.svg'>",
-                ],
-                responsive: {
-                    0: {
-                        items: 1,
-                    },
-                    600: {
-                        items: 1,
-                    },
-                    1000: {
                         items: 1,
                     },
                 },
             };
-            $(".owl-one").owlCarousel(props_one);
-            $(".owl-two").owlCarousel(props_two);
+            $(".owl-carousel").owlCarousel(props_one);
 
             document.querySelector(".ham").addEventListener("click", (e) => {
                 document
