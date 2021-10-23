@@ -97,7 +97,7 @@
             }
             .exp-card {
                 border: 2px dashed #e94c3d;
-                height: 40vh;
+                height: 37vh;
             }
             .owl-dots {
                 display: none !important;
@@ -161,11 +161,15 @@
             }
             .review p {
                 font-size: 1.4vw;
-                text-align: justify;
+                text-align: left;
             }
             @media (max-width: 1400px) {
                 .exp-card {
                     height: 45vh;
+                }
+                .cont {
+                    padding-left: 17vw;
+                    padding-right: 17vw;
                 }
             }
             @media (max-width: 800px) {
@@ -242,6 +246,7 @@
                 .review-left {
                     width: 100%;
                     margin-bottom: 3vh;
+                    padding: 0;
                 }
                 .review-content {
                     width: 100%;
@@ -266,6 +271,15 @@
                     right: 50%;
                     transform: translateX(50%) translateY(350%);
                 }
+                .experience,
+                .onworke {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .owl-carousel {
+                    width: 90%;
+                }
                 .owl-nav {
                     position: static;
                     display: flex;
@@ -287,7 +301,7 @@
                     transition: all 0.3s ease-in-out;
                 }
                 .side-active {
-                    box-shadow: 0 0 100px rgba(255, 255, 255, 0.212);
+                    box-shadow: 0 0 100px rgba(255, 255, 255, 0.12);
                     right: 0;
                     opacity: 1;
                     pointer-events: all;
@@ -453,16 +467,23 @@
                     class="
                         flex
                         items-start
-                        justify-center
+                        justify-end
                         w-6/12
                         pt-60
+                        pr-6
                         lg:pt-44
                         sm:pt-20 sm:w-full sm:justify-center
                     "
                 >
                     <img
                         src="./assets/arm.svg"
-                        class="w-9/12 mb-5 rounded-xl xl:w-10/12 sm:w-8/12"
+                        class="
+                            w-8/12
+                            mb-5
+                            rounded-xl
+                            xl:w-10/12
+                            sm:w-8/12 sm:ml-9
+                        "
                         alt=""
                     />
                 </div>
@@ -564,142 +585,124 @@
                 </h1>
 
                 <div class="owl-carousel owl-theme owl-one">
-                    <div class="item py-12 px-6 exp-card rounded-lg">
+                    <div
+                        class="
+                            item
+                            py-12
+                            px-10
+                            exp-card
+                            rounded-lg
+                            xl:px-5
+                            sm:px-10
+                        "
+                    >
                         <p class="mb-7">May<br />2021</p>
                         <h2 class="text-4xl mb-7 font-bold">
                             Compunnel Software
                         </h2>
-                        <a href="/" class="flex items-center mb-12"
-                            >Finance intern&nbsp;&nbsp;&nbsp;<i
-                                class="
-                                    fas
-                                    fa-chevron-right
-                                    bg-red
-                                    w-7
-                                    h-7
-                                    flex
-                                    justify-center
-                                    items-center
-                                    text-black
-                                    rounded-full
-                                "
-                            ></i
-                        ></a>
+                        <p class="flex items-center mb-12 sm:text-xl">
+                            Finance intern&nbsp;&nbsp;&nbsp;
+                        </p>
                     </div>
 
-                    <div class="item py-12 px-6 exp-card rounded-lg">
+                    <div
+                        class="
+                            item
+                            py-12
+                            px-10
+                            exp-card
+                            rounded-lg
+                            xl:px-5
+                            sm:px-10
+                        "
+                    >
                         <p class="mb-7">July<br />2021</p>
                         <h2 class="text-4xl mb-7 font-bold">
                             Inglu<br />Global
                         </h2>
-                        <a href="/" class="flex items-center mb-12"
-                            >SMM Intern&nbsp;&nbsp;&nbsp;<i
-                                class="
-                                    fas
-                                    fa-chevron-right
-                                    bg-red
-                                    w-7
-                                    h-7
-                                    flex
-                                    justify-center
-                                    items-center
-                                    text-black
-                                    rounded-full
-                                "
-                            ></i
-                        ></a>
+                        <p class="flex items-center mb-12 sm:text-xl">
+                            SMM Intern&nbsp;&nbsp;&nbsp;
+                        </p>
                     </div>
 
-                    <div class="item py-12 px-6 exp-card rounded-lg">
+                    <div
+                        class="
+                            item
+                            py-12
+                            px-10
+                            exp-card
+                            rounded-lg
+                            xl:px-5
+                            sm:px-10
+                        "
+                    >
                         <p class="mb-7">June<br />2021</p>
                         <h2 class="text-4xl mb-7 font-bold">
                             The Uncut<br />Team
                         </h2>
-                        <a href="/" class="flex items-center mb-12"
-                            >Video Editing intern&nbsp;&nbsp;&nbsp;<i
-                                class="
-                                    fas
-                                    fa-chevron-right
-                                    bg-red
-                                    w-7
-                                    h-7
-                                    flex
-                                    justify-center
-                                    items-center
-                                    text-black
-                                    rounded-full
-                                "
-                            ></i
-                        ></a>
+                        <p class="flex items-center mb-12 sm:text-xl">
+                            Video Editing intern&nbsp;&nbsp;&nbsp;
+                        </p>
                     </div>
 
-                    <div class="item py-12 px-6 exp-card rounded-lg">
+                    <div
+                        class="
+                            item
+                            py-12
+                            px-10
+                            exp-card
+                            rounded-lg
+                            xl:px-5
+                            sm:px-10
+                        "
+                    >
                         <p class="mb-7">May<br />2021</p>
                         <h2 class="text-4xl mb-7 font-bold">
                             Compunnel Software
                         </h2>
-                        <a href="/" class="flex items-center mb-12"
-                            >Finance intern&nbsp;&nbsp;&nbsp;<i
-                                class="
-                                    fas
-                                    fa-chevron-right
-                                    bg-red
-                                    w-7
-                                    h-7
-                                    flex
-                                    justify-center
-                                    items-center
-                                    text-black
-                                    rounded-full
-                                "
-                            ></i
-                        ></a>
+                        <p class="flex items-center mb-12 sm:text-xl">
+                            Finance intern&nbsp;&nbsp;&nbsp;
+                        </p>
                     </div>
 
-                    <div class="item py-12 px-6 exp-card rounded-lg">
+                    <div
+                        class="
+                            item
+                            py-12
+                            px-10
+                            exp-card
+                            rounded-lg
+                            xl:px-5
+                            sm:px-10
+                        "
+                    >
                         <p class="mb-7">July<br />2021</p>
                         <h2 class="text-4xl mb-7 font-bold">
                             Inglu<br />Global
                         </h2>
-                        <a href="/" class="flex items-center mb-12"
-                            >SMM Intern&nbsp;&nbsp;&nbsp;<i
-                                class="
-                                    fas
-                                    fa-chevron-right
-                                    bg-red
-                                    w-7
-                                    h-7
-                                    flex
-                                    justify-center
-                                    items-center
-                                    text-black
-                                    rounded-full
-                                "
-                            ></i
-                        ></a>
+                        <p class="flex items-center mb-12 sm:text-xl">
+                            SMM Intern&nbsp;&nbsp;&nbsp;
+                        </p>
                     </div>
 
-                    <div class="item py-12 px-6 exp-card rounded-lg">
+                    <div
+                        class="
+                            item
+                            py-12
+                            px-10
+                            exp-card
+                            rounded-lg
+                            xl:px-5
+                            sm:px-10
+                        "
+                    >
                         <p class="mb-7">June<br />2021</p>
                         <h2 class="text-4xl mb-7 font-bold">
                             The Uncut<br />Team
                         </h2>
-                        <a href="/" class="flex items-center mb-12"
-                            >Video Editing intern&nbsp;&nbsp;&nbsp;<i
-                                class="
-                                    fas
-                                    fa-chevron-right
-                                    bg-red
-                                    w-7
-                                    h-7
-                                    flex
-                                    justify-center
-                                    items-center
-                                    text-black
-                                    rounded-full
-                                "
-                            ></i
-                        ></a>
+                        <p class="flex items-center mb-12 sm:text-xl">
+                            Video Editing intern&nbsp;&nbsp;&nbsp;
+                        </p>
                     </div>
                 </div>
             </div>
@@ -760,7 +763,7 @@
                 </div>
             </div>
 
-            <div class="cont mt-28 mb-24 relative">
+            <div class="cont mt-28 mb-24 relative onworke">
                 <h1
                     class="
                         text-6xl text-red
